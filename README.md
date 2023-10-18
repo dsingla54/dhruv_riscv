@@ -12,7 +12,7 @@ Makerchip provides free and instant access to the latest tools directly from you
 - **Collaboration**: Makerchip supports collaborative work, enabling multiple users to work on the same project simultaneously.
 - **Online Platform**: As a web-based tool, Makerchip eliminates the need for users to install and maintain specialized software, making it accessible from various   devices with an internet connection.
 
-
+<details>
 <summary>DAY-3 : Digital Logic with TL-Verilog in Makerchip IDE</summary>
 <br>
 
@@ -28,7 +28,8 @@ To access a specific example, please follow these steps:
 $out = ! $in;
 $out1 = ($in1 ^ $in2);
 ```
-![B](https://github.com/ramdev604/ramdev_riscv/assets/43489027/3e441e19-8f0f-431c-9b02-e6d01f06eab8)
+![B](https://github.com/dsingla54/dhruv_riscv/assets/139515749/c004943a-8f90-4950-919f-1efa3b23cc8d)
+
 
 
 
@@ -36,14 +37,15 @@ $out1 = ($in1 ^ $in2);
 ```
 $out[4:0] = $in1[3:0] + $in2[3:0];
 ```
-![C](https://github.com/ramdev604/ramdev_riscv/assets/43489027/c50cfb6b-c373-4c78-8399-9925f91f9695)
+![C](https://github.com/dsingla54/dhruv_riscv/assets/139515749/00d34687-209d-43cc-b384-5a342c2b9aa5)
+
 
 **D) Mux without vector & with vectors**
 
 ```
 $out = $sel ? $in1 : $in2;
 ```
-![D](https://github.com/ramdev604/ramdev_riscv/assets/43489027/c37ffbd6-c070-4077-83af-6fe5416e2932)
+![D](https://github.com/dsingla54/dhruv_riscv/assets/139515749/a07bc1bb-739e-4b60-b11d-3801c37dadc9)
 
 
 **E) Simple Claculator**
@@ -57,13 +59,15 @@ $prod[31:0] = $val1 * $val2;
 $qut[31:0] = $val1 / $val2;
 $out[31:0] = $op[1] ? ($op[0] ? $qut: $prod): ($op [0] ? $diff: $sum);
 ```
-![E](https://github.com/ramdev604/ramdev_riscv/assets/43489027/0cd4df26-c7a7-49d6-9265-f5d7c6a25b31)
+![E](https://github.com/dsingla54/dhruv_riscv/assets/139515749/dc895ba9-ed68-49ff-9f94-f1fbdeae5cba)
+
 
 #### Task-4 : Sequential logic 
 ```
 $fib[31:0] = $reset ? 1 : (>>1$fib + >>2$fib); 
 ```
-![F](https://github.com/ramdev604/ramdev_riscv/assets/43489027/91cc0b90-5233-488c-9e07-90ff26243579)
+![F](https://github.com/dsingla54/dhruv_riscv/assets/139515749/d6bc873b-40cb-4060-b6ca-388146b76539)
+
 
 **B) Up-Counter**
 
@@ -72,7 +76,8 @@ $num[2:0] = $reset ? 0 : (>>1$num + 1);
 ```
 
 
-![G](https://github.com/ramdev604/ramdev_riscv/assets/43489027/eff2bd80-dd0e-4090-a220-0331e5b8b5ab)
+![G](https://github.com/dsingla54/dhruv_riscv/assets/139515749/f9a74994-f7ed-4387-9938-02a75b23576a)
+
 
 **C) Sequential Calculator**
 
@@ -87,7 +92,8 @@ $out[31:0] = $op[1] ? ($op[0] ? $qut: $prod): ($op [0] ? $diff: $sum);
 ```
 
 
-![H](https://github.com/ramdev604/ramdev_riscv/assets/43489027/ef7c26e6-a1c3-45d9-8860-26471b65a572)
+![H](https://github.com/dsingla54/dhruv_riscv/assets/139515749/8d62ce88-b3b8-43f2-a617-15a44d9862d1)
+
 
 
 #### Task-5 : Pipelined logic
@@ -105,7 +111,8 @@ $out[31:0] = $op[1] ? ($op[0] ? $qut: $prod): ($op [0] ? $diff: $sum);
 ```
 
 
-![I](https://github.com/ramdev604/ramdev_riscv/assets/43489027/c0504f06-eb5a-4875-ab2f-f7bea40e07ef)
+![I](https://github.com/dsingla54/dhruv_riscv/assets/139515749/18cce82a-976c-4131-8092-5cf3210087d7)
+
 
 
 **Pipeline Implementation**
@@ -121,7 +128,8 @@ $out[31:0] = $op[1] ? ($op[0] ? $qut: $prod): ($op [0] ? $diff: $sum);
 ```
 
 
-![J](https://github.com/ramdev604/ramdev_riscv/assets/43489027/4967a2af-bf07-4566-bfb6-9922952174e0)
+![J](https://github.com/dsingla54/dhruv_riscv/assets/139515749/e018173f-f70a-4e29-9c31-2cbaf9122797)
+
 
 
 #### Task-6 : Validity
@@ -159,7 +167,8 @@ $out[31:0] = $op[1] ? ($op[0] ? $qut: $prod): ($op [0] ? $diff: $sum);
                                               $qut ;
 ```
 
-![K](https://github.com/ramdev604/ramdev_riscv/assets/43489027/d7ae3d73-f6d0-49ee-b21f-a00526f193ce)
+![K](https://github.com/dsingla54/dhruv_riscv/assets/139515749/cc5c90db-1f07-43a8-98ef-a8c609ce4db7)
+
 
 
 **Distance Calculator**
@@ -182,7 +191,8 @@ $out[31:0] = $op[1] ? ($op[0] ? $qut: $prod): ($op [0] ? $diff: $sum);
             $valid ? >>1$total_distance + $cc :
                      >>1$total_distance;
 ```
-![L](https://github.com/ramdev604/ramdev_riscv/assets/43489027/e03dbae4-05ed-4cd5-a7c6-ec5580c48d6f)
+![L](https://github.com/dsingla54/dhruv_riscv/assets/139515749/9d13e505-37bf-466e-ae3b-c71af2f4bbe4)
+
 
 **Calulator Memory**
 ```
@@ -217,7 +227,113 @@ $out[31:0] = $op[1] ? ($op[0] ? $qut: $prod): ($op [0] ? $diff: $sum);
 ```
 
 
-![M](https://github.com/ramdev604/ramdev_riscv/assets/43489027/c93d95d8-7754-4a91-a12d-090f305c293b)
+![M](https://github.com/dsingla54/dhruv_riscv/assets/139515749/caf22bf8-c235-41d4-8751-13d4387b75e5)
+
 </details>
 
 <details>
+
+<summary>DAY 4 : Basic RISC-V CPU Micro Architecture</summary>
+<br>
+
+## Overview
+This RISC-V Architecture Block Diagram illustrates the fundamental components and their interactions within a computer system based on the RISC-V instruction set architecture. RISC-V is a modular and customizable architecture, providing a versatile framework for designing processors tailored to specific application requirements.
+
+## Components
+1. **CPU (Central Processing Unit)**
+   - *Description*: The CPU serves as the core of the RISC-V processor, responsible for executing instructions. It includes multiple stages:
+     - Instruction Fetch (IF): Fetches instructions from memory.
+     - Instruction Decode (ID): Decodes the fetched instructions.
+     - Execution (EX): Performs arithmetic and logic operations.
+     - Memory (MEM): Manages data memory access.
+     - Write Back (WB): Writes results back to registers.
+
+2. **Instruction Memory**
+   - *Description*: This memory component stores the program's instructions that the CPU fetches and executes. It's essential for the program's proper execution.
+
+3. **Data Memory**
+   - *Description*: Data Memory stores data used by the CPU during program execution. It is crucial for data manipulation and storage.
+
+4. **Registers**
+   - *Description*: Registers are a set of general-purpose storage units used for temporary data storage and manipulation by the CPU. They play a pivotal role in instruction execution.
+
+5. **Control Unit**
+   - *Description*: The Control Unit manages control signals and coordinates the activities of the CPU's components, ensuring the proper execution of instructions.
+
+6. **ALU (Arithmetic Logic Unit)**
+   - *Description*: The ALU performs arithmetic and logic operations as directed by the CPU's instructions. It is the computational workhorse of the processor.
+
+7. **Instruction Decoder**
+   - *Description*: The Instruction Decoder interprets and decodes instructions fetched from memory. It translates instructions into actions for the CPU to execute.
+
+8. **Cache Memory**
+   - *Description*: Cache Memory provides fast access to frequently used instructions and data. It helps improve the system's overall performance by reducing memory access times.
+
+9. **Bus Interface**
+   - *Description*: The Bus Interface facilitates data transfer between the CPU, memory, and peripherals. It ensures efficient communication within the system.
+
+10. **Peripherals**
+    - *Description*: Peripherals are external devices such as input/output controllers, timers, and more. They connect to the CPU, enhancing the system's functionality by allowing interaction with the outside world.
+
+For the consecutive labs, we will use the "RISC-V lab starting point code" from https://github.com/stevehoover/RISC-V_MYTH_Workshop.
+
+Use the following links : [Link for the starter code](https://myth.makerchip.com/sandbox?code_url=https:%2F%2Fraw.githubusercontent.com%2Fstevehoover%2FRISC-V_MYTH_Workshop%2Fmaster%2Frisc-v_shell.tlv#)
+
+#### Task-1 : Program Counter
+![1](https://github.com/dsingla54/dhruv_riscv/assets/139515749/538ebaf9-7ee4-4e4c-9d2a-6739cf90752f)
+
+
+
+
+#### Task-2 : Instruction Fetch
+
+![2](https://github.com/dsingla54/dhruv_riscv/assets/139515749/630949bb-5da3-48b2-9daf-5b0ca432a489)
+
+
+
+#### Task-3 : Instruction Decode
+
+![3](https://github.com/dsingla54/dhruv_riscv/assets/139515749/94bc6f2b-49f6-45a0-971a-9c4794d5a346)
+
+
+
+#### Task-4 : Instruction Decode with validity
+
+![4](https://github.com/dsingla54/dhruv_riscv/assets/139515749/e99d0c4e-c901-46ff-abc5-a300045d5ca0)
+
+
+
+#### Task-5 : Individual Instruction decode
+
+![5](https://github.com/dsingla54/dhruv_riscv/assets/139515749/ae871545-330f-4c40-8f76-b4cbb30617ab)
+
+
+
+#### Task-6 : Register File Read
+
+![6](https://github.com/dsingla54/dhruv_riscv/assets/139515749/49b2fe71-d75a-4a60-818f-63f2fc9f85b7)
+
+
+
+#### Task-7 : ALU
+
+![7](https://github.com/dsingla54/dhruv_riscv/assets/139515749/38acb290-b4ad-4ffb-9949-98ad3fb64f53)
+
+
+
+#### Task-8 : Register File Write
+
+![8](https://github.com/dsingla54/dhruv_riscv/assets/139515749/e58daf40-d20b-4e17-acdf-41669bc1fc4b)
+
+
+
+#### Task-9 : Branch Instructions
+
+![9](https://github.com/dsingla54/dhruv_riscv/assets/139515749/2700a34b-e388-4a46-8bab-24767948995d)
+
+
+
+#### Task-10 : Testbench to check functionality
+![10](https://github.com/dsingla54/dhruv_riscv/assets/139515749/e5ad0afb-41f7-4f20-9561-56738021ac10)
+
+</details>

@@ -1,16 +1,22 @@
 ## MYTH RISC-V Workshop
 Navigate to [Makerchip](https://www.makerchip.com/sandbox/)  IDE
-Within this repository, you'll discover comprehensive materials pertaining to the MYTH (Microprocessor for You in Thirty Hours) Workshop, a 5-day program focused on RISC-V CPU Core Design. This workshop is a collaborative effort between VLSI System Design (VSD) and Redwood EDA. Over the course of just five days, participants delve into the fundamentals of the RISC-V ISA and go on to construct a simplified RISC-V core featuring the core instruction set. The RISC-V CPU Core is meticulously crafted using Transaction Level Verilog (TL-Verilog) in conjunction with the Makerchip IDE Platform. Detailed information is provided below for your reference.
 
 
+This repository offers a comprehensive collection of resources related to the MYTH (Microprocessor for You in Thirty Hours) Workshop. This 5-day program is a collaborative effort between VLSI System Design (VSD) and Redwood EDA, focusing on the design of RISC-V CPU cores. Participants in this workshop embark on an educational journey, starting with the basics of the RISC-V Instruction Set Architecture (ISA) and culminating in the creation of a simplified RISC-V core with a complete instruction set.
 
-Makerchip provides free and instant access to the latest tools directly from your browser and from your desktop. This includes open-source tools and proprietary ones. Turning the tables for the open-source community, Redwood EDA, LLC's commercial capabilities are often available for open-source development here first--before they are available commercially.
+One of the standout features of this workshop is the utilization of Transaction Level Verilog (TL-Verilog) in conjunction with the Makerchip Integrated Development Environment (IDE) platform. The Makerchip IDE platform is an exceptional resource that offers numerous benefits, including:
 
-- **SystemVerilog Support**: Makerchip allows users to write and simulate digital designs using the SystemVerilog hardware description language, making it suitable for both     beginners and experienced designers.
-- **RISC-V and Custom Microprocessor Design**: It provides tools for designing custom RISC-V processors or creating entirely new microprocessor architectures.
-- **Code Simulation**: Users can simulate their designs to test functionality and identify potential issues before moving on to the actual hardware implementation.
-- **Collaboration**: Makerchip supports collaborative work, enabling multiple users to work on the same project simultaneously.
-- **Online Platform**: As a web-based tool, Makerchip eliminates the need for users to install and maintain specialized software, making it accessible from various   devices with an internet connection.
+- **SystemVerilog Support**: Makerchip empowers users to author and simulate digital designs using the SystemVerilog hardware description language. This accessibility caters to both newcomers and seasoned designers.
+
+- **RISC-V and Custom Microprocessor Design**: The platform provides a suite of tools for crafting custom RISC-V processors or for venturing into the development of entirely novel microprocessor architectures.
+
+- **Code Simulation**: Users can thoroughly test their designs through simulation, allowing them to verify functionality and identify potential issues before venturing into physical hardware implementation.
+
+- **Collaboration**: Makerchip supports collaborative work, permitting multiple users to collaborate on the same project concurrently. This fosters teamwork and knowledge sharing among participants.
+
+- **Online Platform**: As a web-based tool, Makerchip eliminates the need for users to install and maintain specialized software. This accessibility means that it can be utilized from a variety of devices with an internet connection, simplifying the development process.
+
+Makerchip serves as a hub for both open-source and proprietary tools, often making Redwood EDA, LLC's commercial capabilities available to the open-source development community before they are accessible commercially. It's a versatile and accessible platform that truly empowers designers, educators, and enthusiasts to delve into the exciting world of microprocessor design.
 
 <details>
 <summary>DAY-3 : Digital Logic with TL-Verilog in Makerchip IDE</summary>
@@ -236,45 +242,46 @@ $out[31:0] = $op[1] ? ($op[0] ? $qut: $prod): ($op [0] ? $diff: $sum);
 <summary>DAY 4 : Basic RISC-V CPU Micro Architecture</summary>
 <br>
 
-## Overview
-This RISC-V Architecture Block Diagram illustrates the fundamental components and their interactions within a computer system based on the RISC-V instruction set architecture. RISC-V is a modular and customizable architecture, providing a versatile framework for designing processors tailored to specific application requirements.
+## RISC-V Architecture at a Glance
 
-## Components
-1. **CPU (Central Processing Unit)**
-   - *Description*: The CPU serves as the core of the RISC-V processor, responsible for executing instructions. It includes multiple stages:
-     - Instruction Fetch (IF): Fetches instructions from memory.
-     - Instruction Decode (ID): Decodes the fetched instructions.
-     - Execution (EX): Performs arithmetic and logic operations.
-     - Memory (MEM): Manages data memory access.
-     - Write Back (WB): Writes results back to registers.
+This illustrative RISC-V Architecture Block Diagram provides a holistic view of the foundational components and their intricate interplay within a computer system structured around the versatile RISC-V instruction set architecture. RISC-V stands out as a modular and adaptable framework, offering the freedom to design processors that precisely align with the demands of specific applications.
+
+## Key Building Blocks
+
+1. **Central Processing Unit (CPU)**
+   - *Overview*: The CPU serves as the heart of the RISC-V processor, executing instructions through a series of distinct phases:
+     - Instruction Fetch (IF): Retrieves instructions from memory.
+     - Instruction Decode (ID): Unpacks and comprehends the fetched instructions.
+     - Execution (EX): Performs intricate arithmetic and logical operations.
+     - Memory (MEM): Manages the interaction with data memory.
+     - Write Back (WB): Concludes the process by updating registers.
 
 2. **Instruction Memory**
-   - *Description*: This memory component stores the program's instructions that the CPU fetches and executes. It's essential for the program's proper execution.
+   - *Overview*: This component acts as the repository for the program's instructions, facilitating the CPU's ability to fetch and execute commands with precision.
 
 3. **Data Memory**
-   - *Description*: Data Memory stores data used by the CPU during program execution. It is crucial for data manipulation and storage.
+   - *Overview*: Data Memory acts as the storehouse for data leveraged by the CPU during program execution, ensuring seamless data manipulation and storage.
 
 4. **Registers**
-   - *Description*: Registers are a set of general-purpose storage units used for temporary data storage and manipulation by the CPU. They play a pivotal role in instruction execution.
+   - *Overview*: Registers form a set of versatile storage units designated for temporary data storage and manipulation by the CPU, constituting a pivotal element in the execution of instructions.
 
 5. **Control Unit**
-   - *Description*: The Control Unit manages control signals and coordinates the activities of the CPU's components, ensuring the proper execution of instructions.
+   - *Overview*: The Control Unit serves as the master conductor, orchestrating control signals and harmonizing the activities of the CPU's components to ensure the precise execution of instructions.
 
-6. **ALU (Arithmetic Logic Unit)**
-   - *Description*: The ALU performs arithmetic and logic operations as directed by the CPU's instructions. It is the computational workhorse of the processor.
+6. **Arithmetic Logic Unit (ALU)**
+   - *Overview*: The ALU serves as the computational workhorse of the processor, executing arithmetic and logical operations as dictated by the CPU's instructions.
 
 7. **Instruction Decoder**
-   - *Description*: The Instruction Decoder interprets and decodes instructions fetched from memory. It translates instructions into actions for the CPU to execute.
+   - *Overview*: The Instruction Decoder interprets and deciphers instructions sourced from memory, translating them into actionable directives for the CPU to execute.
 
 8. **Cache Memory**
-   - *Description*: Cache Memory provides fast access to frequently used instructions and data. It helps improve the system's overall performance by reducing memory access times.
+   - *Overview*: Cache Memory acts as a high-speed repository for frequently accessed instructions and data, actively enhancing the system's overall performance by curtailing memory access latency.
 
 9. **Bus Interface**
-   - *Description*: The Bus Interface facilitates data transfer between the CPU, memory, and peripherals. It ensures efficient communication within the system.
+   - *Overview*: The Bus Interface adeptly facilitates the seamless transfer of data between the CPU, memory, and peripheral devices, thereby ensuring efficient communication within the system.
 
-10. **Peripherals**
-    - *Description*: Peripherals are external devices such as input/output controllers, timers, and more. They connect to the CPU, enhancing the system's functionality by allowing interaction with the outside world.
-
+10. **Peripheral Devices**
+    - *Overview*: Peripheral devices encompass external components such as input/output controllers, timers, and more. They establish connections with the CPU, elevating the system's functionality by enabling interaction with the external world.
 For the consecutive labs, we will use the "RISC-V lab starting point code" from https://github.com/stevehoover/RISC-V_MYTH_Workshop.
 
 Use the following links : [Link for the starter code](https://myth.makerchip.com/sandbox?code_url=https:%2F%2Fraw.githubusercontent.com%2Fstevehoover%2FRISC-V_MYTH_Workshop%2Fmaster%2Frisc-v_shell.tlv#)

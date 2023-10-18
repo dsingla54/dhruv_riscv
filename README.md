@@ -337,3 +337,101 @@ Use the following links : [Link for the starter code](https://myth.makerchip.com
 ![10](https://github.com/dsingla54/dhruv_riscv/assets/139515749/e5ad0afb-41f7-4f20-9561-56738021ac10)
 
 </details>
+
+<details>
+<summary>DAY 5 : Complete Pipelined RISC-V Micro Architecture </summary>
+<br>
+
+- Pipelining helps improve the operating frequency by breaking down the micro-arch ito substages that consume lesser time.But this process intriduces some hazards and dependencies such as
+  - Data Hazards
+  - Structural Hazards
+  - Control Hazards
+  - Name Dependence
+  - Anti Dependence
+  - Output Dependence
+
+ ## 3-cycle RISC-V
+
+ - A simple pipeline approach where we divide the arch into 3 stages ie., PC, Decode to ALU, Reg write.
+ - This requires a valid signal that is generated every 3 clock cylces
+
+### Generation of 3 cycle valid signal
+
+![image](https://github.com/dsingla54/dhruv_riscv/assets/139515749/781aab6c-a300-4b0a-b133-1780624399ed)
+
+
+
+- There might be some invalid cycles (invalid operation when valid is on) being encountered in this proccess. SO we have to take care of them.
+
+### 3-cycle RISC-V To take care of invalid signals
+
+- Avoid writing into register file for invalid operations
+- Avoid redirecting PC for nvalid instructions(branch)
+
+![image](https://github.com/dsingla54/dhruv_riscv/assets/139515749/71d1a8c4-f1e7-4277-8f82-a3161e18251a)
+
+
+
+### Introduce 5 stage pipeline 
+
+- 5 stage pipeline : PC, Decode, Reg Rd, ALU, Reg write
+
+## Solutions to Pipeline Hazards
+
+1. Register file bypass
+
+![image](https://github.com/dsingla54/dhruv_riscv/assets/139515749/f6fb6960-b14c-4352-a1db-f5583bacbdb2)
+
+
+
+2. Correct the branch target path
+
+![image](https://github.com/dsingla54/dhruv_riscv/assets/139515749/151870cf-39ce-42db-8a4c-fb5d5df02ed1)
+
+
+
+3. Complete Instruction Decode
+
+
+![image](https://github.com/dsingla54/dhruv_riscv/assets/139515749/2ed6bacb-225c-4b49-920e-7f3bac75c39d)
+
+
+4. Complete ALU
+
+![image](https://github.com/dsingla54/dhruv_riscv/assets/139515749/ed162772-93e0-499e-8e59-e005037ca0c4)
+
+
+
+## Completing RISC-V CPU with final touch of Load/Store Instructions
+
+1. Redirecting Loads
+
+
+![image](https://github.com/dsingla54/dhruv_riscv/assets/139515749/6db9c874-60a6-46a2-8d2f-e977b809a6fd)
+
+
+2. Load Data from Memory to register file
+
+
+![image](https://github.com/dsingla54/dhruv_riscv/assets/139515749/4ca4df40-697f-4503-af40-2ac144608374)
+
+
+3. Instantiate Data memory to CPU
+
+![image](https://github.com/dsingla54/dhruv_riscv/assets/139515749/638b3928-b4b6-4c9f-b368-ffc9ae03bbc3)
+
+
+
+4. Add loads and stores to test the program
+
+```
+m4_asm(SW r0, r10, 100)
+m4_asm(LW r15, r0, 100)
+```
+5. Lab for jump instructions
+
+![10](https://github.com/dsingla54/dhruv_riscv/assets/139515749/81cdb5ff-b287-4c1a-9b18-f7d0cbf69442)
+
+
+
+</details>
